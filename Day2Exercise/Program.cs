@@ -6,11 +6,37 @@ namespace Day2Exercise
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i <= 100; i++)
+            //for loop
+            for (int i = 0; i <= 100; i=i+1)
             {
                 if (i%2 == 0)
                 {
                     Console.WriteLine(i);
+                }
+            }
+
+            //while loop
+            bool runProgram = true;
+            while (runProgram)
+            {
+
+                while (true)
+                {
+                    Console.WriteLine("Do you want to continue looping? (y/n)");
+                    string answer = Console.ReadLine();
+                    if (answer == "n")
+                    {
+                        runProgram = false;
+                        break;
+                    }
+                    else if (answer == "y")
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid answer.");
+                    }
                 }
             }
         }
